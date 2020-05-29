@@ -87,7 +87,9 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: $lines;
+/*! autoprefixer: off */
     -webkit-box-orient: vertical;
+/* autoprefixer: on */
 }
 
 // word-break

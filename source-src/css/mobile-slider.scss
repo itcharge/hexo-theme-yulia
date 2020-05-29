@@ -35,7 +35,9 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+/*! autoprefixer: off */
     -webkit-box-orient: vertical;
+/* autoprefixer: on */
 }
 .header-subtitle {
     padding: 0 24px;
