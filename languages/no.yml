@@ -1,7 +1,7 @@
 categories: Kategorier
 search: Søk
 tags: Tags
-tagcloud: Tag Cloud
+tagcloud: Tagg Cloud
 tweets: Tweets
 prev: Forrige
 next: Neste
@@ -17,3 +17,23 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
+
+post:
+  created: Innlegg opprettet
+  modified: Innlegg endret
+  sticky: Sticky
+  posted: postet på
+  in: Klassifisert i
+  more: mer
+  read_more: Les mer
+  untitled: Uten navn
+  toc_empty: Dette innlegget har ikke en innholdsfortegnelse
+  visitors: besøkende
+  wordcount: Ord teller i artikkel
+  min2read: Lesetid
+  totalcount: Nettstedord totalt antall
+  copyright:
+    author: Innleggsforfatter
+    link: Innlegg link
+    license_title: Opphavsrettserklæring
+    license_content: 'Alle artikler i denne bloggen er lisensiert under <a href="%s" rel="external nofollow" target="_blank">%s</a>, med mindre de angir i tillegg.'

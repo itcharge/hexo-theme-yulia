@@ -50,7 +50,29 @@
           </a>
         </div>
       <% } %>
+      
+      <% if (!index && theme.post_copyright.enable){ %>
+        <div class="post-copyright">
+          <ul>
+            <li class="post-copyright-author">
+              <strong><%= __('post.copyright.author') %>：</strong>
+              <%= config.author %>
+            </li>
+            <li class="post-copyright-link">
+              <strong><%= __('post.copyright.link') %>：</strong>
+              <a href="<%- post.permalink  %>" title="<%- post.title  %>"><%- post.permalink %></a>
+            </li>
+            <li class="post-copyright-license">
+              <strong><%= __('post.copyright.license_title') %>：</strong>
+              <%-  __('post.copyright.license_content', theme.post_copyright.license, theme.post_copyright.license); %>
+            </li>
+          </ul>
+        </div>
+      <% } %>
     </div>
+    
+    
+    
     <div class="article-info article-info-index">
       <%if(post.top){%>
         <div class="article-pop-out tagcloud">
