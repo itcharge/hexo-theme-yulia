@@ -85,7 +85,7 @@ wangyiyun: false
 changyan_appid: false
 changyan_conf: false
 
-#4、Disqus 在hexo根目录的config里也有disqus_shortname字段，优先使用yilia的
+#4、Disqus 在 hexo 根目录的 config 里也有 disqus_shortname 字段，优先使用 Yulia 的
 disqus: false
 
 #5、Gitment
