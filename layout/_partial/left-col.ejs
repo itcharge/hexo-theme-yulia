@@ -12,6 +12,21 @@
 		<p class="header-subtitle"><%=theme.subtitle%></p>
 		<%}%>
 
+		<nav class="header-smart-menu">
+			<% var count = 0; %>
+    		<% for (var i in theme.smart_menu){ %>
+				<% count++; %>
+    			<% if(theme.smart_menu[i]){ %>
+					<div class="header-smart-menu-item">
+		    			<a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)"><%= theme.smart_menu[i] %></a>
+						<% if(count != Object.keys(theme.smart_menu).length) { %>
+							<span class="header-smart-menu-item-divider" >|</span>
+						<% } %>
+					</div>
+    			<% } %>
+            <%}%>
+		</nav>
+		
 		<nav class="header-menu">
 			<ul>
 			<% for (var i in theme.menu){ %>
@@ -19,13 +34,8 @@
 	        <%}%>
 			</ul>
 		</nav>
-		<nav class="header-smart-menu">
-    		<% for (var i in theme.smart_menu){ %>
-    			<% if(theme.smart_menu[i]){ %>
-    			<a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)"><%= theme.smart_menu[i] %></a>
-    			<% } %>
-            <%}%>
-		</nav>
+		
+		
 		<nav class="header-nav">
 			<div class="social">
 				<% for (var i in theme.subnav){ %>

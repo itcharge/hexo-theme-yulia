@@ -113,9 +113,9 @@ slider:
 #smart_menu:
 #  friends: false
 smart_menu:
-  innerArchive: '所有文章'
+  innerArchive: '文章'
   friends: '友链'
-  aboutme: '关于我'
+  aboutme: '关于'
 
 friends:
   友情链接1: http://localhost:4000/
@@ -127,6 +127,8 @@ friends:
 
 aboutme: 很惭愧<br><br>只做了一点微小的工作<br>谢谢大家
 
+
+# -———————— 以下为添加的自定义功能 —————————
 # Yulia 自定义内容
 
 # 文章版权说明，默认开启，关闭将 enable 设置为 false
@@ -135,6 +137,7 @@ post_copyright:
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
   
+# 不蒜子网站访问统计
 busuanzi_count:
   # count values only if the other configs are false
   enable: true
@@ -146,7 +149,7 @@ busuanzi_count:
   site_pv: true
   site_pv_header: 本站总访问量
   site_pv_footer: 次
-  # custom pv span for one page only
+  # 文章页访问次数统计设置
   page_pv: true
   page_pv_header: 阅读数
   page_pv_footer: 次

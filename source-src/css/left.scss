@@ -45,13 +45,30 @@
 			-webkit-box-orient: vertical;
 /* autoprefixer: on */
 		}
-		.header-menu{
+		.header-smart-menu {
+			height: 22px;
+			font-size: 13px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			.header-smart-menu-item {
+				float: left;
+				text-align: center;
+				width: 33.3%;
+				box-sizing: border-box;
+				background-clip: content-box;
+			}
+			.header-smart-menu-item-divider {
+				float: right;
+				text-align: right;
+			}
+		}
+		
+		.header-menu {
 			font-weight: 300;
 			line-height: 31px;
 			text-transform: uppercase;
 			float:none;
 			min-height: 150px;
-			margin-left: -12px;
 			text-align: center;
 			display: -webkit-box;
 			-webkit-box-orient: horizontal;
@@ -65,20 +82,7 @@
 				}
 			}
 		}
-		.header-smart-menu {
-			font-size: 12px;
-			margin-bottom: 20px;
-			a {
-				&:after {
-					content: '/'
-				}
-				&:last-child {
-					&:after {
-						content: ''
-					}
-				}
-			}
-		}
+		
 		.profilepic{
 			text-align: center;
 			display: block;
@@ -109,7 +113,7 @@
 		}
 		.header-author{
 			text-align: center;
-			margin: 0.67em 0;
+			margin: 0.5em 0;
 			font-family: Roboto, "Roboto", serif;
 			font-size: 30px;
 			transition: 0.3s;
