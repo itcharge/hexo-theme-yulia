@@ -135,3 +135,18 @@ post_copyright:
   license: CC BY-NC-SA 3.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
   
+busuanzi_count:
+  # count values only if the other configs are false
+  enable: true
+  # 网站访客人数统计设置
+  site_uv: true
+  site_uv_header: 本站访客数
+  site_uv_footer: 人
+  # 网站访问次数统计设置
+  site_pv: true
+  site_pv_header: 本站总访问量
+  site_pv_footer: 次
+  # custom pv span for one page only
+  page_pv: true
+  page_pv_header: 阅读数
+  page_pv_footer: 次
