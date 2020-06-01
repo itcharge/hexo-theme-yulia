@@ -12,6 +12,16 @@
 		<p class="header-subtitle"><%=theme.subtitle%></p>
 		<%}%>
 
+		
+		
+		<nav class="header-menu">
+			<ul>
+			<% for (var i in theme.menu){ %>
+				<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+	        <%}%>
+			</ul>
+		</nav>
+		
 		<nav class="header-smart-menu">
 			<% var count = 0; %>
     		<% for (var i in theme.smart_menu){ %>
@@ -26,15 +36,6 @@
     			<% } %>
             <%}%>
 		</nav>
-		
-		<nav class="header-menu">
-			<ul>
-			<% for (var i in theme.menu){ %>
-				<li><a href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
-	        <%}%>
-			</ul>
-		</nav>
-		
 		
 		<nav class="header-nav">
 			<div class="social">
