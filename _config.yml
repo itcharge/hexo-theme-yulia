@@ -6,26 +6,26 @@ menu:
 
 # SubNav
 subnav:
-  github: "#"                     # GitHub
-  weibo: "#"                      # 微博
-  rss: "#"                        # rss
-  zhihu: "#"                      # 知乎
-  blog: "#"                      # blog 
-  csdn: "#"                      # CSDN
-  cnblogs: "#"                   # 博客园
-  gitee: "#"                     # 码云
-  qq: "#"                        # QQ
-  weixin: "/img/weixin.png"                    # 微信
-  jianshu: "#"                   # 简书
-  douban: "#"                    # 豆瓣
-  segmentfault: "#"              # 思否
-  bilibili: "#"                  # 哔哩哔哩
-  acfun: "#"                     # AcFun
-  mail: "mailto:xxxxx@xx.com"    # mail
-  facebook: "#"                  # Facebook
-  google: "#"                    # Google
-  twitter: "#"                   # Twitter
-  linkedin: "#"                  # LinkedIn
+  blog: "https://bujige.net"         # blog 
+  github: "#"                        # GitHub
+  weibo: "#"                         # 微博
+  rss: "#"                           # rss
+#  zhihu: "#"                         # 知乎
+#  csdn: "#"                          # CSDN
+#  cnblogs: "#"                       # 博客园
+#  gitee: "#"                         # 码云
+#  qq: "#"                            # QQ
+#  weixin: "/img/weixin.png"          # 微信
+#  jianshu: "#"                       # 简书
+#  douban: "#"                        # 豆瓣
+#  segmentfault: "#"                  # 思否
+#  bilibili: "#"                      # 哔哩哔哩
+#  acfun: "#"                         # AcFun
+#  mail: "mailto:xxxxx@xx.com"        # mail
+#  facebook: "#"                      # Facebook
+#  google: "#"                        # Google
+#  twitter: "#"                       # Twitter
+#  linkedin: "#"                      # LinkedIn
 
 rss: /atom.xml
 
@@ -145,19 +145,19 @@ post_copyright:
   
 # 不蒜子网站访问统计
 busuanzi_count:
-  # count values only if the other configs are false
+  # 只有 site_uv、site_pv、page_pv设置为 false 时，enable 设置为 false 才不显示。
   enable: true
   # 网站访客人数统计设置
   site_uv: true
-  site_uv_header: 本站访客数
+  site_uv_header: <i class="icon-user icon"></i> 本站访客数
   site_uv_footer: 人
   # 网站访问次数统计设置
   site_pv: true
-  site_pv_header: 本站总访问量
+  site_pv_header: <i class="icon-eye icon"></i> 本站总访问量
   site_pv_footer: 次
   # 文章页访问次数统计设置
   page_pv: true
-  page_pv_header: 阅读数
+  page_pv_header: <i class="icon-eye icon"></i> 阅读数
   page_pv_footer: 次
   
 # 页面点击小红心
