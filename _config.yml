@@ -6,22 +6,26 @@ menu:
 
 # SubNav
 subnav:
-  github: "#"
-  weibo: "#"
-  rss: "#"
-  zhihu: "#"
-  #qq: "#"
-  #weixin: "#"
-  #jianshu: "#"
-  #douban: "#"
-  #segmentfault: "#"
-  #bilibili: "#"
-  #acfun: "#"
-  #mail: "mailto:litten225@qq.com"
-  #facebook: "#"
-  #google: "#"
-  #twitter: "#"
-  #linkedin: "#"
+  github: "#"                     # GitHub
+  weibo: "#"                      # 微博
+  rss: "#"                        # rss
+  zhihu: "#"                      # 知乎
+  blog: "#"                      # blog 
+  csdn: "#"                      # CSDN
+  cnblogs: "#"                   # 博客园
+  gitee: "#"                     # 码云
+  qq: "#"                        # QQ
+  weixin: "/img/weixin.png"                    # 微信
+  jianshu: "#"                   # 简书
+  douban: "#"                    # 豆瓣
+  segmentfault: "#"              # 思否
+  bilibili: "#"                  # 哔哩哔哩
+  acfun: "#"                     # AcFun
+  mail: "mailto:xxxxx@xx.com"    # mail
+  facebook: "#"                  # Facebook
+  google: "#"                    # Google
+  twitter: "#"                   # Twitter
+  linkedin: "#"                  # LinkedIn
 
 rss: /atom.xml
 
@@ -32,7 +36,7 @@ root: /
 
 # Content
 
-# 文章卡片右下角常驻链接，不需要请设置为false
+# 文章卡片右下角常驻链接，不需要请设置为 false
 show_all_link: '展开全文'
 # 数学公式
 mathjax: false
@@ -153,3 +157,16 @@ busuanzi_count:
   page_pv: true
   page_pv_header: 阅读数
   page_pv_footer: 次
+  
+# 页面点击小红心
+clickLove:
+  # (关闭请设置为 false)
+  enable: true
+  
+# 悬停预览图片效果
+hover_effect:
+  ## `global` 0: Set separately, 1: Enable global 2: Close global
+  global: 1
+  ## `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
+  # SubNav-导航
+  subNav: true

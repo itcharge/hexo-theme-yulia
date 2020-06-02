@@ -20,6 +20,8 @@
 @import "./tooltip";
 @import "./footer";
 @import "./post-copyright";
+@import "./hover-reveal";
+
 @media screen and (max-width: 800px) {
   @import "./mobile";
   @import "./mobile-slider";

@@ -29,10 +29,10 @@
             }
         }
         a.weibo {
-            background: #aaaaff;
-            border:1px solid #aaaaff;
+            background: #ef182e;
+            border:1px solid #ef182e;
             &:hover {
-                border:1px solid #aaaaff;
+                border:1px solid #ef182e;
             }
         }
         a.segmentfault {
@@ -50,10 +50,10 @@
             }
         }
         a.github {
-            background: #afb6ca;
-            border:1px solid #afb6ca;
+            background: #829aa4;
+            border:1px solid #829aa4;
             &:hover {
-                border:1px solid #909ab6;
+                border:1px solid #829aa4;
             }
         }
         a.facebook {
@@ -134,10 +134,10 @@
             }
         }
         a.qq {
-            background: #34baad;
-            border:1px solid #34baad;
+            background: #28a6e2;
+            border:1px solid #28a6e2;
             &:hover {
-                border:1px solid #34baad;
+                border:1px solid #28a6e2;
             }
         }
         a.psn {
@@ -145,6 +145,41 @@
             border:1px solid #086ef6;
             &:hover {
                 border:1px solid #086ef6;
+            }
+        }
+        a.csdn {
+            background: #c71d23;
+            border: 1px solid #c71d23;
+            &:hover {
+                border: 1px solid #c71d23;
+            }
+        }
+        a.gitee {
+            background: #c71d23;
+            border: 1px solid #c71d23;
+            &:hover {
+                border: 1px solid #c71d23;
+            }
+        }
+        a.cnblogs {
+            background: #2e7dcc;
+            border: 1px solid #2e7dcc;
+            &:hover {
+                border: 1px solid #2e7dcc;
+            }
+        }
+        a.nintendo-switch {
+            background: #d81e06;
+            border: 1px solid #d81e06;
+            &:hover {
+                border: 1px solid #d81e06;
+            }
+        }
+        a.blog {
+            background: #ff8346;
+            border: 1px solid #ff8346;
+            &:hover {
+                border: 1px solid #ff8346;
             }
         }
     }

@@ -1,9 +1,32 @@
-hexo-theme-yilia
+hexo-theme-Yulia
 ================
 
-Yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
-崇尚简约优雅，以及极致的性能。 你可以点击 [我的博客](http://litten.me/) 查看效果。           
+Yulia 是一个简洁优雅的 hexo 主题。
+
+次项目是根据 hexo-theme-yulia 主题进行了一些优化和改动。
+
+Yulia 为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
+
+崇尚简约优雅，以及极致的性能。 你可以点击 [我的博客](http://litten.me/) 查看效果。          
+
+此主题在原有主题基础上进行了如下修改：
+
+#### 新增功能：
+
+1. 增加文章版权说明，可进行自定义。
+2. 删除首页 more 标签。
+3. 添加不蒜子访问量统计功能：站点访问人数统计、访问次数统计、文章页访问次数统计。
+4. 优化左侧导航页面智能菜单样式显示。
+5. 添加页面点击小红心功能。
+6. 增加左侧导航页面社交图标显示。
+7. 增加图片鼠标悬停效果。
+
+#### 修复 BUG：
+
+1. 修复底部上下页符号显示问题。
+
  
+
 如果想体验手机浏览效果，可以扫一下二维码：
 
 ![litten-qrcode](https://cloud.githubusercontent.com/assets/2024949/6349328/51a067fe-bc64-11e4-881c-f68050c50c28.png)
@@ -37,15 +60,15 @@ Yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
              
 ## 一、外观
 
-####**常规**
+#### **常规**
 
 ![常规](https://cloud.githubusercontent.com/assets/2024949/19027861/92879edc-8967-11e6-8e60-7987b6507c8d.gif)
 
-####**手机**
+#### **手机**
 
 ![手机](https://cloud.githubusercontent.com/assets/2024949/19027020/1c5b756a-895f-11e6-99bf-ddff9687aee0.gif)   
 
-####**ipad横竖屏切换**
+#### **ipad横竖屏切换**
 
 ![ipad横竖屏切换](https://cloud.githubusercontent.com/assets/2024949/19026392/e74e1816-8957-11e6-8f08-eac9b3c8c036.gif)                    
 
@@ -60,7 +83,7 @@ Yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
 #### 安装
 
 ``` bash
-$ git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia
+$ git clone https://github.com/bujige/hexo-theme-yulia.git themes/yulia
 ```
 
 #### 配置
