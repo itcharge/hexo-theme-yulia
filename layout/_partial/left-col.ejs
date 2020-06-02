@@ -24,10 +24,17 @@
 		
 		<nav class="header-smart-menu">
 			<% var count = 0; %>
+			<% for (var i in theme.smart_menu){ %>
+				<% if (theme.smart_menu[i]) { %>
+				<% count++; %>
+				<% } %>
+			<% } %>
+			<% var itemlWidth = 100 / count + '%' %>
+			<% count = 0; %>
     		<% for (var i in theme.smart_menu){ %>
 				<% count++; %>
     			<% if(theme.smart_menu[i]){ %>
-					<div class="header-smart-menu-item">
+					<div class="header-smart-menu-item" style="width: <%= itemlWidth %>">
 		    			<a q-on="click: openSlider(e, '<%-i%>')" href="javascript:void(0)"><%= theme.smart_menu[i] %></a>
 						<% if(count != Object.keys(theme.smart_menu).length) { %>
 							<span class="header-smart-menu-item-divider" >|</span>

@@ -1,7 +1,8 @@
 <%
   var hasInnerArchive = theme.smart_menu.innerArchive
   var hasFriends = theme.smart_menu.friends
-  var hasAboutme = theme.smart_menu.aboutme
+  var hasAboutMe = theme.smart_menu.aboutme
+  var hasCategory = theme.smart_menu.category
 %>
 <div class="tools-col" q-class="show:isShow,hide:isShow|isFalse" q-on="click:stop(e)">
   <div class="tools-nav header-menu">
@@ -84,6 +85,12 @@
     	</section>
     <%}%>
 
+    <%if(hasCategory){%> 
+      <section class="tools-section tools-section-category" q-show="category">
+            <%- list_categories({depth: 1}) %>
+      </section>
+    <%}%>
+    
     <%if(hasFriends){%>
     	<section class="tools-section tools-section-friends" q-show="friends">
   		<%if(theme.friends && theme.friends.length != 0){%>
@@ -98,13 +105,14 @@
     	</section>
     <%}%>
 
-    <%if(hasAboutme){%>
+    <%if(hasAboutMe){%>
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	<%if(theme.aboutme){%>
   	  		<div class="aboutme-wrap" id="js-aboutme"><%=theme.aboutme%></div>
   	  	<%}%>
     	</section>
     <%}%>
+
   </div>
   
 </div>

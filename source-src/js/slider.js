@@ -36,6 +36,7 @@ function init() {
 			innerArchive: false,
 			friends: false,
 			aboutme: false,
+			category: false,
 			items: [],
 			jsonFail: false,
 			showTags: false,
@@ -60,12 +61,14 @@ function init() {
 	        	if (!type) {
 	        		type = 'innerArchive'
 	        	}
-				// innerArchive: '所有文章'
-  				// friends: '友情链接'
-  				// aboutme: '关于我'
+				// innerArchive: '文章'
+  				// friends: '友链'
+  				// aboutme: '关于'
+				// category: '目录'
   				app.$set('innerArchive', false)
   				app.$set('friends', false)
   				app.$set('aboutme', false)
+				app.$set('category', false)
   				app.$set(type, true)
   				app.$set('isShow', true)
   				app.$set('isCtnShow', true)
@@ -186,6 +189,7 @@ function init() {
 			app.$set('innerArchive', true)
 			app.$set('friends', false)
 			app.$set('aboutme', false)
+			app.$set('category', false)
 			app.$set('isShow', true)
 			app.$set('isCtnShow', true)
 			app.$set('search', '#' + $em.innerHTML)

@@ -207,4 +207,34 @@
         color: #fffdd8;
         text-shadow: 1px 1px rgba(77, 77, 77, 0.45);
     }
+    .tools-section-category {
+        padding-top: 30px;
+    }
+    
+    .category-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .category-list-item { 
+        padding: 10px 20px;
+        border-bottom: 1px dotted #dcdcdc;
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    .category-list-count {
+        color: rgba(255,255,248,1);
+        &:before {
+            content: " ("
+        }
+        &:after {
+            content: ") "
+        }
+    }
+    .category-list-link {
+        color: rgba(255,255,248,1);
+    }
 }
