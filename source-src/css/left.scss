@@ -6,6 +6,13 @@
 	transition:all .2s ease-in;
 	height:100%;
 	z-index: 999;
+	overflow: hidden;
+	overflow-y: auto;
+	margin-bottom: 15px;
+	
+	&::-webkit-scrollbar {
+		display: none;
+	}
 	&.show {
 		@extend %shadow;
 	}
