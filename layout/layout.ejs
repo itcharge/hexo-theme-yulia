@@ -24,11 +24,18 @@
     <%- partial('_partial/viewer') %>
   </div>
   
+  <%# "页面点击小红心" %>
   <% if (theme.clickLove && theme.clickLove.enable){ %>
-    <%# "页面点击小红心" %>
     <script type="text/javascript" src="/js/clickLove.js"></script>
   <% } %>
   
+  <%# "进度条显示" %>
+  <% if (theme.progressBar.enable) { %>
+    <script src="/js/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/<%= theme.progressBar.color || 'blue'%>/pace-theme-<%= theme.progressBar.type || 'minimal'%>.css" rel="stylesheet">
+  <% } %>
+
+  <%# "鼠标悬停显示图片" %>
   <%- partial('_partial/hover-effect', { global: theme.hover_effect.global }) %>
 </body>
 </html>

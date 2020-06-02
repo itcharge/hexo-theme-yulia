@@ -124,7 +124,7 @@ smart_menu:
   
 
 friends:
-  友情链接1: http://localhost:4000/
+  友情链接1: https://bujige.net
   友情链接2: http://localhost:4000/
   友情链接3: http://localhost:4000/
   友情链接4: http://localhost:4000/
@@ -172,3 +172,14 @@ hover_effect:
   ## `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
   # SubNav-导航
   subNav: true
+  
+# Progress Bar | 页面加载进度条
+# Demo: http://github.hubspot.com/pace/docs/welcome/
+# type: barber-shop|big-counter|bounce|center-atom|center-circle|
+#       center-radar|center-simple|corner-indicator|flash|flat-top|
+#       loading-bar|mac-osx|minimal
+# color: black|blue|green|orange|pink|purple|red|silver|white|yellow|
+progressBar:
+  enable: false
+  type: 'minimal'  # Keep Quotes | 注意保留引号
+  color: blue
