@@ -106,9 +106,9 @@ style:
   # 右滑板块背景
   slider: 'linear-gradient(200deg,#a0cfe4,#e8c37e)'
 
-# slider的设置
+# slider 的设置
 slider:
-  # 是否默认展开tags板块
+  # 是否默认展开 tags 板块
   showTags: false
 
 # 智能菜单
@@ -140,12 +140,14 @@ aboutme: 知足且上进，<br>温柔而坚定。<br><br>心怀浪漫宇宙，<b
 # 文章版权说明，默认开启，关闭将 enable 设置为 false
 post_copyright:
   enable: true
+  # 版权协议
   license: CC BY-NC-SA 3.0
+  # 版权协议地址
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
   
 # 不蒜子网站访问统计
 busuanzi_count:
-  # 只有 site_uv、site_pv、page_pv设置为 false 时，enable 设置为 false 才不显示。
+  # 只有 site_uv、site_pv、page_pv 都设置为 false 时，enable 设置为 false 才不显示访问统计。
   enable: true
   # 网站访客人数统计设置
   site_uv: true
@@ -162,15 +164,14 @@ busuanzi_count:
   
 # 页面点击小红心
 clickLove:
-  # (关闭请设置为 false)
+  # 关闭请设置为 false
   enable: true
   
 # 悬停预览图片效果
 hover_effect:
-  ## `global` 0: Set separately, 1: Enable global 2: Close global
+  # `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
   global: 1
-  ## `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
-  # SubNav-导航
+  # subNav-导航
   subNav: true
   
 # Progress Bar | 页面加载进度条
@@ -183,3 +184,12 @@ progressBar:
   enable: false
   type: 'minimal'  # Keep Quotes | 注意保留引号
   color: blue
+  
+# 底部
+footer:
+# 网站成立年份,置为 false 默认显示今年（显示格式为：© 2018-2020）
+  since: 2018
+# 网站版权信息说明，置为 false 默认显示作者或网站标题
+  copyright: false
+# 网站备案号，置为 false 则不显示（显示格式为：© XXXICP备XXXX号）
+  icp: XXXICP备XXXX号
