@@ -1,4 +1,4 @@
-<% if (theme.site_count.enable) { %>
+<% if ((theme.site_count.enable && (theme.site_count.site_uv || theme.site_count.site_pv)) || (theme.page_read_count.enable && theme.page_read_count.page_pv)) { %>
   <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <% } %>
 

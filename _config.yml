@@ -131,7 +131,7 @@ friends:
   友情链接5: http://localhost:4000/
   友情链接6: http://localhost:4000/
 
-aboutme: 知足且上进，<br>温柔而坚定。<br><br>心怀浪漫宇宙，<br>也珍惜人间日常。<br><br> 愿你活成自己喜欢的模样。<br>谢谢大家
+aboutme: 把人生的全部，<br>奉献给我所热爱的一切。<br><br>谢谢大家 ~
 
 
 # -———————— 以下为添加的自定义功能 —————————
@@ -148,7 +148,7 @@ post_copyright:
   # 版权协议地址
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
   
-# 网站访问统计：访客人数统计、访问次数统计
+# 网站访问量统计：访客人数统计、访问次数统计
 site_count:
   # enable 设置为 false 时不显示网站访问统计。
   enable: false
@@ -162,10 +162,10 @@ site_count:
   site_pv_footer: 次
   
   
-# 文章页阅读相关统计：字数统计、阅读时长、访问次数
+# 文章页阅读统计：字数统计、阅读时长、访问次数
 page_read_count:
   # enable 置为 false 不显示阅读相关统计。
-  enable: false
+  enable: true
   # 文章字数统计
   word_count: true
   word_count_header: <i class="icon-statistics icon"></i> 字数统计：
