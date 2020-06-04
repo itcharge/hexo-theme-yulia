@@ -1,0 +1,35 @@
+<div class="read_count" style="margin-top:10px;">
+  
+  <% if(theme.page_read_count.word_count && !index){ %>
+    <span class="<%= class_name %>">
+      <%- theme.page_read_count.word_count_header %>
+        <span class="post-count"><%= wordcount(post.content) %></span>
+      <%- theme.page_read_count.word_count_footer %>
+    </span>
+  <% } %>
+
+
+  <% if(theme.page_read_count.word_count && theme.page_read_count.read_time && !index) { %>
+    &nbsp; | &nbsp;
+  <% } %>
+  
+  <% if(theme.page_read_count.read_time && !index){ %>
+    <span class="<%= class_name %>">
+      <%- theme.page_read_count.read_time_header %>
+        <span class="post-count"><%= min2read(post.content) %></span>
+      <%- theme.page_read_count.read_time_footer %>
+    </span>
+  <% } %>
+  
+  <% if((theme.page_read_count.word_count || theme.page_read_count.read_time) && theme.page_read_count.page_pv && !index) { %>
+    &nbsp; | &nbsp;
+  <% } %>  
+  
+  <% if(theme.page_read_count.page_pv && !index) { %>
+    <span class="<%= class_name %>"> 
+      <%- theme.page_read_count.page_pv_header %>
+      <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+      <%- theme.page_read_count.page_pv_footer %>
+    </span>
+  <% } %>
+</div>

@@ -1,5 +1,4 @@
-
-<% if (theme.busuanzi_count.site_uv) { %>
+<% if (theme.site_count.enable) { %>
   <script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <% } %>
 
@@ -22,25 +21,27 @@
     	<div class="footer-right">
     		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/bujige/hexo-theme-yulia" target="_blank">Yulia</a> by WorkingBoy
     	</div>
-      <div class="footer-center">
-        <% if (theme.busuanzi_count.site_uv) { %>
-          <span class="busuanzi-count">
-            <%-theme.busuanzi_count.site_uv_header%>
-            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-            <%-theme.busuanzi_count.site_uv_footer%>
-          </span>
-        <% } %>
-        <% if (theme.busuanzi_count.site_uv && theme.busuanzi_count.site_pv) { %>
-          <span class="post-meta-divider" >|</span>
-        <% } %>
-        <% if (theme.busuanzi_count.site_pv) { %>
-          <span class="busuanzi-count">
-            <%-theme.busuanzi_count.site_pv_header%>
-            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-            <%-theme.busuanzi_count.site_pv_footer%>
-          </span>
-        <% } %>
-      </div>
+      <% if(theme.site_count.enable) { %>
+        <div class="footer-center">
+          <% if (theme.site_count.site_uv) { %>
+            <span class="busuanzi-count">
+              <%-theme.site_count.site_uv_header%>
+              <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+              <%-theme.site_count.site_uv_footer%>
+            </span>
+          <% } %>
+          <% if (theme.site_count.site_uv && theme.site_count.site_pv) { %>
+            <span class="post-meta-divider" >|</span>
+          <% } %>
+          <% if (theme.site_count.site_pv) { %>
+            <span class="busuanzi-count">
+              <%-theme.site_count.site_pv_header%>
+              <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+              <%-theme.site_count.site_pv_footer%>
+            </span>
+          <% } %>
+        </div>
+      <% } %>
     </div>
   </div>
 </footer>

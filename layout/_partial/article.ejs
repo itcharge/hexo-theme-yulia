@@ -4,7 +4,10 @@
       <header class="article-header">
         <%- partial('post/title', {class_name: 'article-title'}) %>
         <% if (!post.noDate){ %>
-        <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+          <%- partial('post/date', {class_name: 'archive-article-date', date_format: null}) %>
+        <% } %>
+        <% if(theme.page_read_count.enable && !post.no_read_count){ %>
+          <%- partial('post/read-count', {class_name: 'page-read-count', date_format: null}) %>
         <% } %>
       </header>
     <% } %>

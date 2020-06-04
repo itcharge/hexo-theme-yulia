@@ -1,11 +1,3 @@
-<% if(theme.busuanzi_count.enable && theme.busuanzi_count.page_pv && !index) { %>
-	<span class="<%= class_name %>"> 
-		<%-theme.busuanzi_count.page_pv_header%>
-		<span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
-		<%-theme.busuanzi_count.page_pv_footer%>
-	</span>
-<% } %>
-
 <a href="<%- url_for(post.path) %>" class="<%= class_name %>">
   	<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><i class="icon-calendar icon"></i><%= date(post.date, date_format) %></time>
 </a>

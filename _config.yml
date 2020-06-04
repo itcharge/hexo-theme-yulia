@@ -137,10 +137,10 @@ aboutme: 知足且上进，<br>温柔而坚定。<br><br>心怀浪漫宇宙，<b
 # -———————— 以下为添加的自定义功能 —————————
 # Yulia 自定义内容
 
-# 开启百度站长平台自动推送（https://ziyuan.baidu.com/linksubmit/index）
+# 开启百度站长平台自动推送，有利于 SEO 搜索（https://ziyuan.baidu.com/linksubmit/index）
 baidu_push_auto: false
   
-# 文章版权说明，默认开启，关闭将 enable 设置为 false
+# 文章版权说明：默认开启，关闭将 enable 设置为 false。
 post_copyright:
   enable: true
   # 版权协议
@@ -148,10 +148,10 @@ post_copyright:
   # 版权协议地址
   license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
   
-# 不蒜子网站访问统计
-busuanzi_count:
-  # 只有 site_uv、site_pv、page_pv 都设置为 false 时，enable 设置为 false 才不显示访问统计。
-  enable: true
+# 网站访问统计：访客人数统计、访问次数统计
+site_count:
+  # enable 设置为 false 时不显示网站访问统计。
+  enable: false
   # 网站访客人数统计设置
   site_uv: true
   site_uv_header: <i class="icon-user icon"></i> 本站访客数
@@ -160,11 +160,25 @@ busuanzi_count:
   site_pv: true
   site_pv_header: <i class="icon-eye icon"></i> 本站总访问量
   site_pv_footer: 次
+  
+  
+# 文章页阅读相关统计：字数统计、阅读时长、访问次数
+page_read_count:
+  # enable 置为 false 不显示阅读相关统计。
+  enable: false
+  # 文章字数统计
+  word_count: true
+  word_count_header: <i class="icon-statistics icon"></i> 字数统计：
+  word_count_footer: 字
+  # 文章最低阅读时间
+  read_time: true
+  read_time_header: <i class="icon-book icon"></i> 阅读时长 ≈
+  read_time_footer: 分
   # 文章页访问次数统计设置
   page_pv: true
-  page_pv_header: <i class="icon-eye icon"></i> 阅读数
+  page_pv_header: <i class="icon-eye icon"></i> 阅读数：
   page_pv_footer: 次
-  
+
 # 页面点击小红心
 clickLove:
   # 关闭请设置为 false
@@ -172,12 +186,12 @@ clickLove:
   
 # 悬停预览图片效果
 hover_effect:
-  # `global` 0: 分开设置, 1: 全局启用, 2: 全局关闭
+  # 'global' 0: 分开设置, 1: 全局启用, 2: 全局关闭
   global: 1
-  # subNav-导航
+  # subNav - 导航栏悬停预览图片效果
   subNav: true
   
-# Progress Bar | 页面加载进度条
+# 页面加载进度条 | progressBar
 # Demo: http://github.hubspot.com/pace/docs/welcome/
 # type: barber-shop|big-counter|bounce|center-atom|center-circle|
 #       center-radar|center-simple|corner-indicator|flash|flat-top|
@@ -190,9 +204,9 @@ progressBar:
   
 # 底部
 footer:
-# 网站成立年份,置为 false 默认显示今年（显示格式为：© 2018-2020）
+# 网站成立年份,置为 false 则默认显示今年（显示格式为：© 2018-2020）
   since: 2018
-# 网站版权信息说明，置为 false 默认显示作者或网站标题
+# 网站版权信息说明，置为 false 则默认显示作者或网站标题
   copyright: false
 # 网站备案号，置为 false 则不显示（显示格式为：© XXXICP备XXXX号）
   icp: XXXICP备XXXX号
