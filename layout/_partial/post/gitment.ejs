@@ -1,5 +1,5 @@
 <div id="gitment-ctn"></div> 
-<% if (theme.gitment_accelerate) { %>
+<% if (theme.gitment.accelerate) { %>
   <link rel="stylesheet" href="<%- url_for('css/gitment.css') %>">
   <script src="<%- url_for('js/gitment.js') %>"></script>
 <% } else { %>
@@ -10,11 +10,11 @@
 <script>
   var gitment = new Gitment({
     id: "<%=url%>",
-    owner: '<%=theme.gitment_owner%>',
-    repo: '<%=theme.gitment_repo%>',
+    owner: '<%=theme.gitment.owner%>',
+    repo: '<%=theme.gitment.repo%>',
     oauth: {
-      client_id: '<%=theme.gitment_oauth.client_id%>',
-      client_secret: '<%=theme.gitment_oauth.client_secret%>',
+      client_id: '<%=theme.gitment.oauth_client_id%>',
+      client_secret: '<%=theme.gitment.oauth_client_secret%>',
     },
   })
   gitment.render('gitment-ctn')

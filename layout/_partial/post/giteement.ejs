@@ -1,0 +1,24 @@
+<div id="giteement-ctn"></div>
+<% if (theme.giteement.accelerate){ %>
+  <link rel="stylesheet" href="<%- url_for('css/giteement.css') %>">
+  <script src="<%- url_for('js/giteement.js') %>"></script>
+<% } else { %>
+  <link rel="stylesheet" href="https://giteement.oss-cn-beijing.aliyuncs.com/default.css">
+  <script src="https://giteement.oss-cn-beijing.aliyuncs.com/giteement.browser.js"></script>
+<% } %>
+<script>
+  var giteement = new Giteement({
+    <% var oauth_uri_token = 'https://cors-anywhere.herokuapp.com/https://gitee.com/oauth/token'; %>
+    id: '<%=page.date.format('YYYYMMDDHHmmss')%>',
+    owner: '<%=theme.giteement.owner%>',
+    repo: '<%=theme.giteement.repo%>',
+    backcall_uri: '<%=theme.giteement.backcall_uri%>',
+    oauth_uri: '<%=oauth_uri_token%>',
+    oauth: {
+      client_id: '<%=theme.giteement.oauth_client_id%>',
+      client_secret: '<%=theme.giteement.oauth_client_secret%>'
+    },
+  })
+  giteement.render('giteement-ctn')
+</script>
+

@@ -132,15 +132,22 @@
       <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </section>
   <% } %>
-
+  
   <%# "Gitment：利用 Github Issues 搭建" %>
-  <% if (theme.gitment_owner && theme.gitment_repo && theme.gitment_oauth && theme.gitment_oauth.client_id && theme.gitment_oauth.client_secret){ %>
-  <%- partial('post/gitment', {
+  <% if (theme.gitment.enable && theme.gitment.owner && theme.gitment.repo && theme.gitment.oauth_client_id && theme.gitment.oauth_client_secret){ %>
+    <%- partial('post/gitment', {
       key: post.slug,
       title: post.title,
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
   
-  <%# "Gitment" %>
+  <%# "Giteement: 利用码云搭建" %>
+  <% if (theme.giteement.enable && theme.giteement.owner && theme.giteement.repo && theme.giteement.oauth_client_id && theme.giteement.oauth_client_secret && theme.giteement.backcall_uri) { %>
+    <%- partial('post/giteement', {
+      key: post.slug,
+      title: post.title,
+      url: config.url+url_for(post.path)
+    }) %>
+  <% } %>
 <% } %>
