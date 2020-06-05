@@ -77,7 +77,7 @@ avatar:
 # 是否开启分享
 share_jia: true
 
-# 评论：1. 畅言云评; 2. Disqus; 3. Gitment; 4. Giteement
+# 评论：1. 畅言云评; 2. Disqus; 3. Gitment; 4. Giteement; DaoVoice 在线沟通工具
 # 不需要使用某项，直接设置值为 false，或注释掉。
 # 具体请参考 wiki：https://github.com/litten/hexo-theme-yilia/wiki/
 
@@ -107,7 +107,10 @@ giteement:
   backcall_uri: ''         # 应用回调地址（请和配置的第三方应用保持一致）
   accelerate: true         # 是否使用自定义 js 提升访问速度（置为 true 则使用本地 js 加速，置为 false 则使用官网默认 js）
   
-    
+# 5. DaoVoice 在线沟通工具
+daovoice:
+  enable: false            # 是否启用 DaoVoice 在线沟通工具
+  app_id: ''               # DaoVoice 上的 app_id
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
