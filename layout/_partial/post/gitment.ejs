@@ -1,15 +1,21 @@
 <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
-<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<% if (theme.gitment_accelerate) { %>
+  <link rel="stylesheet" href="<%- url_for('css/gitment.css') %>">
+  <script src="<%- url_for('js/gitment.js') %>"></script>
+<% } else { %>
+  <link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+  <script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<% } %>
+
 <script>
-var gitment = new Gitment({
-  id: "<%=url%>",
-  owner: '<%=theme.gitment_owner%>',
-  repo: '<%=theme.gitment_repo%>',
-  oauth: {
-    client_id: '<%=theme.gitment_oauth.client_id%>',
-    client_secret: '<%=theme.gitment_oauth.client_secret%>',
-  },
-})
-gitment.render('gitment-ctn')
+  var gitment = new Gitment({
+    id: "<%=url%>",
+    owner: '<%=theme.gitment_owner%>',
+    repo: '<%=theme.gitment_repo%>',
+    oauth: {
+      client_id: '<%=theme.gitment_oauth.client_id%>',
+      client_secret: '<%=theme.gitment_oauth.client_secret%>',
+    },
+  })
+  gitment.render('gitment-ctn')
 </script>

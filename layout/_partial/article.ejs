@@ -102,30 +102,17 @@
 
 
 <% if (!index && post.comments){ %>
-  <% if (theme.duoshuo){ %>
-  <%- partial('post/duoshuo', {
+  
+  <%# "畅言云评" %>
+  <% if (theme.changyan_appid && theme.changyan_conf){ %>
+    <%- partial('post/changyan', {
       key: post.slug,
       title: post.title,
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
   
-  <% if (theme.wangyiyun){ %>
-  <%- partial('post/wangyiyun', {
-      key: post.slug,
-      title: post.title,
-      url: config.url+url_for(post.path)
-    }) %>
-  <% } %>
-
-  <% if (theme.changyan_appid && theme.changyan_conf){ %>
-  <%- partial('post/changyan', {
-      key: post.slug,
-      title: post.title,
-      url: config.url+url_for(post.path)
-    }) %>
-  <% } %>
-
+  <%# "Disqus" %>
   <% if (theme.disqus || config.disqus_shortname){ %>
     <section id="comments">
       <div id="disqus_thread"></div>
@@ -135,7 +122,9 @@
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var dsq = document.createElement('script'); 
+          dsq.type = 'text/javascript'; 
+          dsq.async = true;
           dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
@@ -144,11 +133,14 @@
     </section>
   <% } %>
 
-  <% if (theme.gitment_owner && theme.gitment_repo &&theme.gitment_oauth && theme.gitment_oauth.client_id && theme.gitment_oauth.client_secret){ %>
+  <%# "Gitment：利用 Github Issues 搭建" %>
+  <% if (theme.gitment_owner && theme.gitment_repo && theme.gitment_oauth && theme.gitment_oauth.client_id && theme.gitment_oauth.client_secret){ %>
   <%- partial('post/gitment', {
       key: post.slug,
       title: post.title,
       url: config.url+url_for(post.path)
     }) %>
   <% } %>
+  
+  <%# "Gitment" %>
 <% } %>
