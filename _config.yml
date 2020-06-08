@@ -107,10 +107,22 @@ giteement:
   backcall_uri: ''         # 应用回调地址（请和配置的第三方应用保持一致）
   accelerate: true         # 是否使用自定义 js 提升访问速度（置为 true 则使用本地 js 加速，置为 false 则使用官网默认 js）
   
-# 5. DaoVoice 在线沟通工具
+# 5. Valine https://valine.js.org
+valine: 
+  enable: false            # 是否启用 Valine 评论系统
+  appid:                   # Leancloud 应用的 appId
+  appkey:                  # Leancloud 应用的 appKey
+  verify: false            # 验证码
+  notify: false            # 评论回复提醒
+  avatar: mm               # 评论列表头像样式：''/mm/identicon/monsterid/wavatar/retro/hide
+  placeholder: Just go go  # 评论框占位符  
+  
+# 6. DaoVoice 在线沟通工具
 daovoice:
   enable: false            # 是否启用 DaoVoice 在线沟通工具
   app_id: ''               # DaoVoice 上的 app_id
+
+
 
 # 样式定制 - 一般不需要修改，除非有很强的定制欲望…
 style:
