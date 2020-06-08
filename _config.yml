@@ -44,9 +44,9 @@ mathjax: false
 open_in_new: false
 
 # 打赏
-# 打赏type设定：0-关闭打赏; 1-文章对应的.md文件里有 reward:true 属性，才有打赏; 2-所有文章均有打赏.
+# 打赏 type 设定：0-关闭打赏; 1-文章对应的.md文件里有 reward:true 属性，才有打赏; 2-所有文章均有打赏.
 reward_type: 2
-# 打赏wording
+# 打赏 wording
 reward_wording: '谢谢你请我吃糖果'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 alipay: 
@@ -55,7 +55,7 @@ weixin:
 
 # 目录
 # 目录设定：0-不显示目录; 1-文章对应的.md文件里有 toc:true 属性，才有目录; 2-所有文章均显示目录
-toc: 2
+toc: 1
 # 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为 true 即可隐藏 hexo 重复的序号；否则置为 false
 toc_hide_index: true
 # 目录为空时的提示
@@ -156,7 +156,7 @@ friends:
   友情链接5: http://localhost:4000/
   友情链接6: http://localhost:4000/
 
-aboutme: 把人生的全部，<br>奉献给我所热爱的一切。<br><br>谢谢大家 ~
+aboutme: 把我的全部，<br>奉献给我所热爱的一切。<br><br>谢谢大家 ~
 
 
 # -———————— 以下为 Yulia 添加的自定义功能 —————————
@@ -190,7 +190,7 @@ site_count:
 # 文章页阅读统计：字数统计、阅读时长、访问次数
 page_read_count:
   # enable 置为 false 不显示阅读相关统计。
-  enable: true
+  enable: false
   # 文章字数统计
   word_count: true
   word_count_header: <i class="icon-statistics icon"></i> 字数统计：
