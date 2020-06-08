@@ -42,4 +42,9 @@
   <%- partial('baidu-analytics') %>
   <%# "百度自动推送" %>
   <%- partial('baidu-push-auto') %>
+  
+  <%# "Daovoice: 在线沟通工具" %>
+  <% if (theme.daovoice.enable && theme.daovoice.app_id){ %>
+    <%- partial('post/daovoice') %>
+  <% } %>
 </head>
