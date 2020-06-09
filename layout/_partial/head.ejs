@@ -3,34 +3,63 @@
 <head>
   <meta charset="utf-8">
   <%
-  var title = page.title;
+    var title = page.title;
 
-  if (is_archive()){
-    title = 'Archives';
+    if (is_archive()){
+      title = 'Archives';
 
-    if (is_month()){
-      title += ': ' + page.year + '/' + page.month;
-    } else if (is_year()){
-      title += ': ' + page.year;
+      if (is_month()){
+        title += ': ' + page.year + '/' + page.month;
+      } else if (is_year()){
+        title += ': ' + page.year;
+      }
+    } else if (is_category()){
+      title = 'Category: ' + page.category;
+    } else if (is_tag()){
+      title = 'Tag: ' + page.tag;
     }
-  } else if (is_category()){
-    title = 'Category: ' + page.category;
-  } else if (is_tag()){
-    title = 'Tag: ' + page.tag;
-  }
   %>
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="<%= config.url %>">
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+
+  <% if (config.title) { %>
+    <meta name="title" content="<%= config.title %>" />
+  <% } %>
+  
+  <% if (page.keywords) { %>
+    <meta name="keywords" content="<%= page.keywords %>" />
+  <% } else if (page.tags && page.tags.length) { %>
+    <meta name="keywords" content="<% page.tags.data.forEach(function (tag, index) { %><% if(index+1 != page.tags.length){%><%-tag.name%>,<%}else{%><%=tag.name%><%}%><%})%>">
+  <% } else if (theme.keywords) { %>
+    <meta name="keywords" content="<%= theme.keywords %>" />
+  <% } %>
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
-  <% if (theme.rss){ %>
+  <% if(theme.rss){ %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
+  
+  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  
+  <% if (theme.favicon.normal){ %>
+    <link rel="icon" href="<%- theme.favicon.normal %>">
   <% } %>
+  
+  <% if (theme.favicon.medium) { %>
+    <link rel="icon" type="image/png" sizes="32x32" href="<%- url_for(theme.favicon.medium) %>">
+  <% } %>
+  <% if (theme.favicon.small) { %>
+    <link rel="icon" type="image/png" sizes="16x16" href="<%- url_for(theme.favicon.small) %>">
+  <% } %>
+  <% if (theme.favicon.apple_touch_icon) { %>
+    <link rel="apple-touch-icon" sizes="180x180" href="<%- url_for(theme.favicon.apple_touch_icon) %>">
+  <% } %>
+  <% if (theme.favicon.safari_pinned_tab) { %>
+    <link rel="mask-icon" href="<%- url_for(theme.favicon.safari_pinned_tab) %>" color="#000000">
+  <% } %>
+    
   <%- partial('css') %>
   <style type="text/css">
   <% var defaultCtnBg = 'linear-gradient(200deg,#a0cfe4,#e8c37e)' %>
@@ -40,11 +69,17 @@
   </style>
   <%- partial('google-analytics') %>
   <%- partial('baidu-analytics') %>
+  
   <%# "百度自动推送" %>
   <%- partial('baidu-push-auto') %>
   
   <%# "Daovoice: 在线沟通工具" %>
   <% if (theme.daovoice.enable && theme.daovoice.app_id){ %>
     <%- partial('post/daovoice') %>
+  <% } %>
+  
+  <%# "GitHub Ribbon Fork" %>
+  <% if (theme.github_fork.enable && theme.github_fork.type == "ribbon") { %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
   <% } %>
 </head>

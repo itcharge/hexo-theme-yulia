@@ -1,10 +1,24 @@
 <%- partial('_partial/head') %>
 <body>
-  <div id="container" q-class="show:isCtnShow">
+  <div id="container" q-class="show:isCtnShow">      
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
+    
+    <%# "GitHub Fork" %>
+    <% if (theme.github_fork.enable && theme.github_fork.type == "ribbon") { %>
+      <% var position = theme.github_fork.position; %>
+      <% if (position == "left-top" || position == "left-bottom" || position == "right-top" || position == "right-bottom") { %>
+        <a class="github-fork-ribbon <%-position%>" href="<%-theme.github_fork.repo%>" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+      <% } else { %> 
+        <a class="github-fork-ribbon" href="<%-theme.github_fork.repo%>" data-ribbon="Fork me on GitHub" title="Fork me on GitHub">Fork me on GitHub</a>
+      <% } %>
+    <% } else if (theme.github_fork.enable && theme.github_fork.type == "corner") { %>
+      <%- partial('_partial/github-corner') %>
+    <% } %>
+    
     <div class="left-col" q-class="show:isShow">
       <%- partial('_partial/left-col', null, {cache: !config.relative_link}) %>
     </div>
+    
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
       <%- partial('_partial/mobile-nav', null, {cache: !config.relative_link}) %>
       <div id="wrapper" class="body-wrap">

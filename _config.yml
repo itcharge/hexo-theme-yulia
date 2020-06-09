@@ -7,15 +7,15 @@ menu:
 # SubNav
 subnav:
   blog: "https://bujige.net"         # blog 
-  github: "#"                        # GitHub
+  github: "https://github.com/bujige"# GitHub
+  weixin: "/img/wexin.png"          # 微信
   weibo: "#"                         # 微博
-  rss: "#"                           # rss
+#  rss: "#"                           # rss
 #  zhihu: "#"                         # 知乎
 #  csdn: "#"                          # CSDN
 #  cnblogs: "#"                       # 博客园
 #  gitee: "#"                         # 码云
 #  qq: "#"                            # QQ
-#  weixin: "/img/weixin.png"          # 微信
 #  jianshu: "#"                       # 简书
 #  douban: "#"                        # 豆瓣
 #  segmentfault: "#"                  # 思否
@@ -48,9 +48,9 @@ open_in_new: false
 reward_type: 2
 # 打赏 wording
 reward_wording: '谢谢你请我吃糖果'
-# 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
+# 支付宝收款二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 alipay: 
-# 微信二维码图片地址
+# 微信收款二维码图片地址
 weixin: 
 
 # 目录
@@ -69,10 +69,20 @@ baidu_analytics: ''
 google_analytics: ''
 
 # 网站图标 url
-favicon: /favicon.png
+# 默认的 Yulia 图标放置在  xxx/themes/yulia/source/img/ 目录中. 
+# xxx 为你的 hexo 博客目录。
+favicon: 
+  normal: /img/favicon-32x32-yulia.png
+#  small: /img/favicon-16x16-yulia.png
+#  medium: /img/favicon-32x32-yulia.png
+#  apple_touch_icon: /img/apple-touch-icon-yulia.png
+#  safari_pinned_tab: /images/logo-yulia.svg
 
 # 你的头像 url
-avatar:
+avatar: /img/avatar.png
+
+# 网站关键字，用 "," 隔开，例如：blog,skill,life
+keywords: ""
 
 # 是否开启分享
 share_jia: true
@@ -186,7 +196,6 @@ site_count:
   site_pv_header: <i class="icon-eye icon"></i> 本站总访问量
   site_pv_footer: 次
   
-  
 # 文章页阅读统计：字数统计、阅读时长、访问次数
 page_read_count:
   # enable 置为 false 不显示阅读相关统计。
@@ -226,6 +235,16 @@ progressBar:
   enable: false
   type: 'minimal'  # Keep Quotes | 注意保留引号
   color: blue
+  
+# Github Fork View:
+# type-显示类型; position-显示位置; repo-你的 GitHub 仓库地址
+# type: ribbon | corner
+# positon: left-top | left-bottom | right-top | right-bottom
+github_fork:
+  enable: false
+  type: 'corner'                      # 显示类型，默认为 ribbon 类型
+  position: 'right-top'               # 显示位置，默认为 右上角
+  repo: 'https://github.com/bujige/'  # 你的 GitHub 仓库地址
   
 # 底部
 footer:

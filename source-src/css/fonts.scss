@@ -1,15 +1,15 @@
 @font-face {
-  font-family: "yulia-font";
-  src: url('./fonts/yulia-font.eot'); /* IE9*/
-  src: url('./fonts/yulia-font.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('./fonts/yulia-font.woff') format('woff'), /* chrome, firefox */
-  url('./fonts/yulia-font.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('./fonts/yulia-font.svg#iconfont') format('svg'); /* iOS 4.1- */
+  font-family: "yulia-fonts";
+  src: url('./fonts/yulia-fonts.eot'); /* IE9*/
+  src: url('./fonts/yulia-fonts.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./fonts/yulia-fonts.woff') format('woff'), /* chrome, firefox */
+  url('./fonts/yulia-fonts.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./fonts/yulia-fonts.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'yulia-font' !important;
+  font-family: 'yulia-fonts' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
