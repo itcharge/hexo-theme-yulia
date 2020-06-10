@@ -181,7 +181,7 @@ post_copyright:
   # 版权协议名称
   license: CC BY-NC-SA 3.0
   # 版权协议地址
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/cn
   
 # 网站访问量统计：访客人数统计、访问次数统计。
 site_count:
