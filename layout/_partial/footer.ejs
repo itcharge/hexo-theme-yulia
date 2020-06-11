@@ -7,11 +7,8 @@
     <div id="footer-info">
     	<div class="footer-left">
         &copy; 
-        <% var newDate = date(new Date(), 'YYYY') %>
-        <% if(theme.footer.since && !isNaN(theme.footer.since) && theme.since < newDate) { %>
-          <%- footer.theme.since %>-
-        <% } %>
-        <%= newDate %>
+        <% var newDate = date(new Date(), 'YYYY'); %>
+        <% if(theme.footer.since && !isNaN(theme.footer.since) && theme.footer.since < newDate) { %><%- theme.footer.since %>-<% } %><%-newDate%>
         <%= theme.footer.copyright || config.author || config.title %>
         <% if(theme.footer.icp) { %>
           &copy;
@@ -24,21 +21,13 @@
       <% if(theme.site_count.enable) { %>
         <div class="footer-center">
           <% if (theme.site_count.site_uv) { %>
-            <span class="busuanzi-count">
-              <%-theme.site_count.site_uv_header%>
-              <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-              <%-theme.site_count.site_uv_footer%>
-            </span>
+            <span class="busuanzi-count"><%- theme.site_count.site_uv_header %><span class="busuanzi-value" id="busuanzi_value_site_uv"></span><%- theme.site_count.site_uv_footer %></span>
           <% } %>
           <% if (theme.site_count.site_uv && theme.site_count.site_pv) { %>
             <span class="post-meta-divider" >|</span>
           <% } %>
           <% if (theme.site_count.site_pv) { %>
-            <span class="busuanzi-count">
-              <%-theme.site_count.site_pv_header%>
-              <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-              <%-theme.site_count.site_pv_footer%>
-            </span>
+            <span class="busuanzi-count"><%- theme.site_count.site_pv_header %><span class="busuanzi-value" id="busuanzi_value_site_pv"></span><%- theme.site_count.site_pv_footer %></span>
           <% } %>
         </div>
       <% } %>
